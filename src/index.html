@@ -10,16 +10,11 @@
           <h2>Results</h2>
           <div class="outline">
             <div ng-repeat="house in results">
-              <div id="{{ house.id }}" class="property">
-                <div class="agency" style="background-color:{{ house.agency.brandingColors.primary }}">
-                  <img src="{{ house.agency.logo }}">
-                </div>
-                <img src="{{ house.mainImage }}">
-                <div class="price">
-                  <p>Price: {{ house.price }}</p>
-                </div>
-              </div>
-              <button class="green btn" ng-click="addProperty($index)">add property</button>
+              <property house="house"></property>
+              <button class="green btn" 
+                      ng-click="addProperty($index)">
+                  add property
+              </button>
             </div>
           </div>
         </div>
@@ -27,21 +22,18 @@
           <h2>Saved Properties</h2>
           <div class="outline">
             <div ng-repeat="house in saved">
-             <div id="{{ house.id }}" class="property">
-                <div class="agency" style="background-color:{{ house.agency.brandingColors.primary }}">
-                  <img src="{{ house.agency.logo }}">
-                </div>
-                <img src="{{ house.mainImage }}">
-                <div class="price">
-                  <p>Price: {{ house.price }}</p>
-                </div>
-              </div>
-              <button class="red btn" ng-click="removeProperty($index)">remove property</button>
+              <property house="house"></property>
+              <button class="red btn"
+                      ng-click="removeProperty($index)">
+                  remove property
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+  <script src="app.js"></script>
   <script src="resultsController.js"></script>
+  <script src="propertyDirective.js"></script>
   </body>
 </html>

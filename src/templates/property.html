@@ -1,0 +1,10 @@
+<div id="{{ house.id }}" class="property">
+  <div class="agency" 
+       style="background-color:{{ house.agency.brandingColors.primary }}">
+    <img ng-src="{{ house.agency.logo }}">
+  </div>
+  <img ng-src="{{ house.mainImage }}">
+  <div class="price">
+    <p>Price: {{ house.price }}</p>
+  </div>
+</div>
