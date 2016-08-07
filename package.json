@@ -1,0 +1,17 @@
+{
+  "name": "rea-ui-dev-codetest",
+  "description": "REA UI Developer Code test",
+  "devDependencies": {
+    "angular-mocks": "^1.5.8",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.2",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.0.2"
+  },
+  "dependencies": {
+    "angular": "1.4.8"
+  },
+  "scripts": {
+    "test": "karma start"
+  }
+}
