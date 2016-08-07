@@ -10,12 +10,14 @@ angular.module('myApp', []).controller('resultsCtrl', function($scope) {
       return $scope.saved.length;
   };
 
+  // Pushes the results property into the saved list then splices it out
   $scope.addProperty = function(index) {
       $scope.index  = index;
       $scope.saved.push($scope.results[$scope.index]);
       $scope.results.splice($scope.index, 1);
   }
 
+  // Pushes the saved property into the results list then splices it out
   $scope.removeProperty = function(index) {
       $scope.index  = index;
       $scope.results.push($scope.saved[$scope.index]);
