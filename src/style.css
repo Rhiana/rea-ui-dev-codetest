@@ -50,7 +50,8 @@ h2 {
 }
 
 .price {
-  border-top: #3d3d3d solid 2px; 
+  border-top: #3d3d3d solid 2px;
+  padding-left: 1em;
 }
 
 img {

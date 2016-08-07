@@ -1,4 +1,4 @@
-angular.module('myApp', []).controller('resultsCtrl', function($scope) {
+app.controller('resultsCtrl', function($scope) {
 
   // Houses in results
   $scope.getTotalResults = function () {
@@ -12,16 +12,14 @@ angular.module('myApp', []).controller('resultsCtrl', function($scope) {
 
   // Pushes the results property into the saved list then splices it out
   $scope.addProperty = function(index) {
-      $scope.index  = index;
-      $scope.saved.push($scope.results[$scope.index]);
-      $scope.results.splice($scope.index, 1);
+      $scope.saved.push($scope.results[index]);
+      $scope.results.splice(index, 1);
   }
 
   // Pushes the saved property into the results list then splices it out
   $scope.removeProperty = function(index) {
-      $scope.index  = index;
-      $scope.results.push($scope.saved[$scope.index]);
-      $scope.saved.splice($scope.index, 1);
+      $scope.results.push($scope.saved[index]);
+      $scope.saved.splice(index, 1);
   }
 
 

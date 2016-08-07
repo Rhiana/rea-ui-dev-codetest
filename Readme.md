@@ -22,5 +22,6 @@ Functionality has then been added to move properties between the two columns. Th
 `npm run test`
 
 ## To Run program
- * Currently: Open index.html file in your browser (installation process for testing only)
+ * Currently: Local server via command line
+   * `python -m SimpleHTTPServer`
  * To Do: Set up local server and asset pipeline with Gulp
