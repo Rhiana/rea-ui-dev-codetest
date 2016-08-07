@@ -24,4 +24,5 @@ Functionality has then been added to move properties between the two columns. Th
 ## To Run program
  * Currently: Local server via command line
    * `python -m SimpleHTTPServer`
+   * http://localhost:8000/src/index.html
  * To Do: Set up local server and asset pipeline with Gulp
