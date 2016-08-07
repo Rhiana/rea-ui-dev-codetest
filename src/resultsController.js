@@ -1,8 +1,21 @@
 angular.module('myApp', []).controller('resultsCtrl', function($scope) {
 
-  $scope.addProperty = function(house) {
-    $scope.test = 5;
+  // Houses in results
+  $scope.getTotalResults = function () {
+      return $scope.results.length;
+  };
+
+  // Houses in saved
+  $scope.getTotalSaved = function () {
+      return $scope.saved.length;
+  };
+
+  $scope.addProperty = function(index) {
+      $scope.index  = index;
+      $scope.saved.push($scope.results[$scope.index]);
+      $scope.results.splice($scope.index, 1);
   }
+
 
   $scope.results  = [
     {

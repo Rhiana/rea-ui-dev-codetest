@@ -9,11 +9,14 @@ describe('addingProperty', function () {
 	}));
 
 	describe('addProperty', function () {
-		it('test', function () {
+		it('When adding a property it should be removed from results and added to saved', function () {
 			var $scope = {};
 			var controller = $controller('resultsCtrl', { $scope: $scope });
-      $scope.addProperty();
-			expect( $scope.test ).toEqual(5);
+      $scope.addProperty(1);
+      $scope.results = $scope.getTotalResults();
+      $scope.saved   = $scope.getTotalSaved();
+			expect( $scope.results ).toEqual(2);
+      expect( $scope.saved ).toEqual(2);
 		});	
 	});
 
