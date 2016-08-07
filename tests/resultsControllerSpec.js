@@ -20,4 +20,16 @@ describe('addingProperty', function () {
 		});	
 	});
 
+  describe('removeProperty', function () {
+    it('When removing a property it should be removed from saved and added to results', function () {
+      var $scope = {};
+      var controller = $controller('resultsCtrl', { $scope: $scope });
+      $scope.removeProperty(0);
+      $scope.results = $scope.getTotalResults();
+      $scope.saved   = $scope.getTotalSaved();
+      expect( $scope.results ).toEqual(4);
+      expect( $scope.saved ).toEqual(0);
+    }); 
+  });
+
 });

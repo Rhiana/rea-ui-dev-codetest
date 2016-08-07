@@ -16,6 +16,12 @@ angular.module('myApp', []).controller('resultsCtrl', function($scope) {
       $scope.results.splice($scope.index, 1);
   }
 
+  $scope.removeProperty = function(index) {
+      $scope.index  = index;
+      $scope.results.push($scope.saved[$scope.index]);
+      $scope.saved.splice($scope.index, 1);
+  }
+
 
   $scope.results  = [
     {
