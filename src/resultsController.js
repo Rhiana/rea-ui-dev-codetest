@@ -1,7 +1,7 @@
 angular.module('myApp', []).controller('resultsCtrl', function($scope) {
 
   $scope.addProperty = function(house) {
-      alert("test");
+    $scope.test = 5;
   }
 
   $scope.results  = [
