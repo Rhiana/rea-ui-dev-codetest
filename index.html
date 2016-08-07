@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-US">
+<link rel="stylesheet" type="text/css" href="style.css">
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <body>
-    <div ng-app="myApp" ng-controller="resultsCtrl">
-      <ul>
-        <li ng-repeat="house in results">
-          {{ house.price }}
-        </li>
-      </ul>
+    <div class="main" role="main">
+      <h1>Your Properties</h1>
+      <div ng-app="myApp" ng-controller="resultsCtrl" class="grid">
+        <div class="results column">
+          <h2>Results</h2>
+          <ul>
+            <li ng-repeat="house in results">
+              {{ house.price }}
+            </li>
+          </ul>
+        </div>
+        <div class="saved column">
+          <h2>Saved</h2>
+          <ul>
+            <li ng-repeat="house in saved">
+              {{ house.price }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   <script src="resultsController.js"></script>
   </body>
