@@ -8,19 +8,35 @@
       <div ng-app="myApp" ng-controller="resultsCtrl" class="grid">
         <div class="results column">
           <h2>Results</h2>
-          <ul>
-            <li ng-repeat="house in results">
-              {{ house.price }}
-            </li>
-          </ul>
+          <div class="outline">
+            <div ng-repeat="house in results">
+              <div id="{{ house.id }}" class="property">
+                <div class="agency" style="background-color:{{ house.agency.brandingColors.primary }}">
+                  <img src="{{ house.agency.logo }}">
+                </div>
+                <img src="{{ house.mainImage }}">
+                <div class="price">
+                  <p>Price: {{ house.price }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="saved column">
-          <h2>Saved</h2>
-          <ul>
-            <li ng-repeat="house in saved">
-              {{ house.price }}
-            </li>
-          </ul>
+          <h2>Saved Properties</h2>
+          <div class="outline">
+            <div ng-repeat="house in saved">
+             <div id="{{ house.id }}" class="property">
+                <div class="agency" style="background-color:{{ house.agency.brandingColors.primary }}">
+                  <img src="{{ house.agency.logo }}">
+                </div>
+                <img src="{{ house.mainImage }}">
+                <div class="price">
+                  <p>Price: {{ house.price }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

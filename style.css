@@ -4,6 +4,11 @@ body {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 
+h1,
+h2 {
+  text-align: center;
+}
+
 .main {
   max-width: 820px;
   margin: 0 auto; 
@@ -25,4 +30,29 @@ body {
 
 .grid .column {
   width: 45%;
+  margin: 0 1em;
+}
+
+.outline {
+  border: #3d3d3d dashed 2px;
+}
+
+.property {
+  border: #3d3d3d solid 2px;
+  border-radius: 10px;
+  margin: 1em;
+}
+
+.agency {
+  border-radius: 10px 10px 0 0;
+  padding: 5px;
+  border-bottom: #3d3d3d solid 2px;
+}
+
+.price {
+  border-top: #3d3d3d solid 2px; 
+}
+
+img {
+  max-width: 100%
 }
