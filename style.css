@@ -54,5 +54,51 @@ h2 {
 }
 
 img {
-  max-width: 100%
+  max-width: 100%;
+  margin-bottom: -5px;
 }
+
+.property:hover ~ .btn {
+  opacity: 1;
+  transition: opacity 300ms ease-out;
+}
+
+.btn {
+  position: relative;
+  bottom: 125px;
+  left: 27%;
+  text-align: center;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  opacity: 0;
+  border-style: none;
+  transition: background-color 300ms ease-out;
+}
+
+.btn.green {
+  color: #f5f5f5;
+  background-color: #32cd32;
+  border-color: #32cd32;
+}
+
+.btn.green:hover,
+.btn.green:focus {
+  opacity: 1;
+  background-color: #269e26;
+}
+
+.btn.red {
+  color: #f5f5f5;
+  background-color: #ff1414;
+  border-color: #ff1414;
+}
+
+.btn.red:hover,
+.btn.red:focus {
+  opacity: 1;
+  background-color: #c50000;
+}
+
+
